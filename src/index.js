@@ -1,6 +1,6 @@
 
 const express = require('express')
-import { PORT } from './config.js'
+
 const app= express()
 //para reconocer html
 
@@ -14,6 +14,6 @@ app.use(require('./routes/index'))
 //routes
 
 //execution server web
-app.listen(PORT)
+app.listen(process.env.PORT || 3000)
 console.log("Server running in http://localhost:4000")
 app.get('/',(req,res)=>{res.send('Servidor Estudiantes ')})
